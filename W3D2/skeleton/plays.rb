@@ -26,7 +26,7 @@ class Play
       FROM
        plays
       WHERE
-        plays.title = title
+        title = "#{title}"
       SQL
   end
 
@@ -40,7 +40,7 @@ class Play
         playwrights
         ON plays.playwright_id = playwrights.id
       WHERE
-        playwright.name = name
+        playwright.name = "#{name}"
       SQL
   end
 
@@ -93,7 +93,7 @@ class Playwright
       FROM
        playwrights
       WHERE
-        playwrights.name = name
+        name = "#{name}"
       SQL
   end
 
@@ -136,7 +136,7 @@ class Playwright
         playwrights
         ON plays.playwright_id = playwrights.id
       WHERE
-        playwright.name = name
+        playwright.name = "#{name}"
       SQL
 
   end
